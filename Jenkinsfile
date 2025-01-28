@@ -1,5 +1,8 @@
 pipeline {
     agent any
+     tools {
+        maven 'Maven 3.9.9'  // Nom de l'installation que vous avez configurée
+    }
     stages {
         stage('Cloner le code') {
             steps {
