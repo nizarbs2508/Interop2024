@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Cloner le code') {
             steps {
-                git 'https://github.com/nizarbs2508/Interop2024.git'
+                // Spécifier la branche 'main' explicitement pour le checkout
+                git branch: 'main', url: 'https://github.com/nizarbs2508/Interop2024.git'
             }
         }
         stage('Construire') {
